@@ -1,0 +1,31 @@
+html {
+    font-size: 10px;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    // background-color: #E3E7D0;
+
+    background: radial-gradient(circle, #C9E2CC, #D8DEB2, #EDE7DE); /* Gradient màu hình tròn ban đầu */
+    background-size: 200% 200%; /* Kích thước gradient */
+    animation: gradientAnimation 5s linear infinite; /* Áp dụng animation */
+}
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+.wrapper {
+    margin: 0 auto;
+    max-width: 1600px;
+}
+.container {
+    // background-color: azure;
+}
+@import "./header";
+@import "./hero";
+@import "./main";
+@import "./branding";
+@import "./footer";

@@ -1,0 +1,48 @@
+.footer {
+
+    .footer-container {
+        display: flex;
+        justify-content: space-between;
+
+        .footer__left {
+            flex: 1;
+
+            p {
+                @include text(1.8rem, 400, 2.7rem, $title-color);
+            }
+        }
+        
+        .footer__right {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+            gap: 0 8rem;
+
+            .footer--links {
+                display: flex;
+                flex-direction: column;
+            }
+            .footer--contact {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .link__item--title {
+                margin-bottom: 2.2rem;
+                @include text(1.8rem, 600, 2.7rem, $main-color);
+            }
+            .link__item {
+                margin-bottom: 2rem;
+
+                a {
+                    @include text(1.8rem, 400, 2.7rem, $title-color);
+                    text-decoration: none;
+
+                    &:hover {
+                        color: $main-color;
+                    }
+                }
+            }
+        }
+    }
+}

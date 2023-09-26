@@ -1,0 +1,34 @@
+@import "./variable";
+@import "./mixins";
+
+// Header Section
+.header {
+    margin-bottom: 11.3rem;
+    
+    .header-container {
+        margin-top: 2rem;
+        padding: 1rem 0;
+
+        .header__menu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0 1rem;
+        
+            .header__menu--item {
+                padding: 0.6rem 2rem;
+                border-radius: 2.4rem;
+                transition: 0.2s all;
+
+                &:hover {
+                    background: #F2F3E7;
+                }
+                
+                a {
+                    @include text(18px, 500, 27px, $text-color);
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}

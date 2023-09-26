@@ -1,0 +1,76 @@
+// Main Section
+.main {
+    margin-bottom: 12.8rem;
+
+    .main-container {
+
+        .card__main {
+            display: flex;
+            gap: 0 6.4rem;
+            margin-bottom: 15rem;
+
+            .card__main--left {
+                overflow: hidden;
+                max-height: 50rem;
+                border-radius: 6.4rem;
+                cursor: pointer;
+                transition: 0.2s all;
+                
+                &:hover {
+                    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.1);
+                    transform: translateY(-2%);
+                }
+
+                h2 {
+                    @include text(4.5rem, 700, 5.8rem, $title-color);
+                    text-align: right;
+                    margin: 6.4rem 6.4rem 5.8rem;
+                    font-family: 'Acorn';
+                }
+
+                img {
+                    transform: translateX(6rem);
+                }
+            }
+            .card__main--right {
+                overflow: hidden;
+                max-height: 50rem;
+                border-radius: 6.4rem;
+                cursor: pointer;
+                transition: 0.2s all;
+                
+                &:hover {
+                    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.1);
+                    transform: translateY(-2%);
+                }
+
+                h2 {
+                    @include text(4.5rem, 700, 5.8rem, $title-color);
+                    text-align: right;
+                    margin: 6.4rem 6.4rem 5.8rem;
+                    font-family: 'Acorn';
+                }
+
+                img {
+                    transform: translateX(6rem);
+                }
+            }
+            .main__top--mc {
+                flex-basis: 35%;
+                background: #D094E5;
+            }
+            .main__top--kol {
+                flex-basis: 65%;
+                background: #A3DCD4;
+            }
+            .main__bottom--tvc {
+                flex-basis: 65%;
+                background: #E8B89C;
+            }
+            .main__bottom--award {
+                flex-basis: 35%;
+                background: #BDDFF9;
+            }
+        }
+    }
+}
