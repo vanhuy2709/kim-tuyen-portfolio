@@ -372,4 +372,98 @@ body {
   border-radius: 2rem;
 }
 
+.contact {
+  margin: 20rem 0 20rem 0;
+}
+.contact .contact-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0 4rem;
+}
+.contact .contact-container .box-contact {
+  width: 25%;
+  height: 40rem;
+  background: hsla(0, 0%, 100%, 0.3);
+  border-radius: 1.2rem;
+  padding: 7rem 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  word-wrap: break-word;
+  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.contact .contact-container .box-contact:hover {
+  transform: translateY(-0.5rem);
+}
+.contact .contact-container .box-contact .contact-logo {
+  font-size: 5rem;
+  margin-bottom: 3.4rem;
+}
+.contact .contact-container .box-contact .contact-name {
+  font-size: 2.2rem;
+  font-weight: 600;
+  line-height: 3.9rem;
+  color: #4C6763;
+  margin-bottom: 2.3rem;
+}
+.contact .contact-container .box-contact .contact-desc {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 3rem;
+  color: #5b5b5b;
+}
+
+.form .form-container {
+  display: flex;
+  align-items: center;
+}
+.form .form-container .form__left {
+  flex: 1;
+}
+.form .form-container .form__left h2 {
+  font-size: 5rem;
+  font-weight: 600;
+  line-height: 6.5rem;
+  color: #364442;
+  max-width: 50rem;
+}
+.form .form-container .form__right {
+  flex: 1;
+}
+.form .form-container .form__right #contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem 0;
+}
+.form .form-container .form__right #contact-form input {
+  font-size: 1.7rem;
+  border: none;
+  outline: none;
+  border-radius: 5rem;
+  padding: 1rem 2.5rem;
+  color: #444444;
+  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.1);
+  background-color: hsla(0, 0%, 100%, 0.3);
+}
+.form .form-container .form__right #contact-form input:nth-child(1) {
+  width: 65%;
+}
+.form .form-container .form__right #contact-form input:nth-child(2) {
+  width: 65%;
+}
+.form .form-container .form__right #contact-form textarea {
+  font-size: 1.7rem;
+  line-height: 2.6rem;
+  border: none;
+  outline: none;
+  border-radius: 3rem;
+  padding: 1.8rem 2.5rem;
+  color: #444444;
+  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.1);
+  height: 14rem;
+  background-color: hsla(0, 0%, 100%, 0.3);
+}
+
 /*# sourceMappingURL=style.css.map */
