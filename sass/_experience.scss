@@ -1,0 +1,25 @@
+
+.experience {
+    margin-bottom: 7.5rem;
+}
+.card {
+    border-radius: 0 0 2rem 2rem;
+    margin-bottom: 1.6rem;
+}
+
+.card-header {
+    background: $main-color;
+
+    a {
+        @include text(2rem, 600, 3rem, #fff);
+        font-family: 'Acorn';
+        
+        &:hover {
+            text-decoration: none
+        }
+    }
+}
+.card-body {
+    @include text(1.8rem, 400, 2.7rem, $text-color);
+
+}

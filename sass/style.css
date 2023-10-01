@@ -186,7 +186,6 @@ body {
   background-color: #fff;
   border-radius: 5.4rem;
   overflow: hidden;
-  margin-bottom: 27.3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -205,6 +204,9 @@ body {
   object-fit: cover;
 }
 
+.footer {
+  margin-top: 27.3rem;
+}
 .footer .footer-container {
   display: flex;
   justify-content: space-between;
@@ -251,6 +253,123 @@ body {
 }
 .footer .footer-container .footer__right .link__item a:hover {
   color: #025A4E;
+}
+
+.summary {
+  margin-bottom: 9.8rem;
+}
+.summary .summary-container {
+  display: flex;
+  align-items: center;
+  gap: 0 12.8rem;
+}
+.summary .summary-container .summary__thumb {
+  flex: 1;
+}
+.summary .summary-container .summary__thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20rem 20rem 0 0;
+}
+.summary .summary-container .summary__info {
+  flex: 2;
+}
+.summary .summary-container .summary__info .summary__intro {
+  font-size: 6.3rem;
+  font-weight: 700;
+  line-height: 7rem;
+  color: #025A4E;
+  font-family: "Acorn";
+  margin-bottom: 3.2rem;
+}
+.summary .summary-container .summary__info .summary__desc {
+  font-size: 2.2rem;
+  font-weight: 400;
+  line-height: 3.5rem;
+  color: #4C6763;
+  letter-spacing: -0.3px;
+  font-family: "Acorn";
+}
+
+.experience {
+  margin-bottom: 7.5rem;
+}
+
+.card {
+  border-radius: 0 0 2rem 2rem;
+  margin-bottom: 1.6rem;
+}
+
+.card-header {
+  background: #025A4E;
+}
+.card-header a {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 3rem;
+  color: #fff;
+  font-family: "Acorn";
+}
+.card-header a:hover {
+  text-decoration: none;
+}
+
+.card-body {
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 2.7rem;
+  color: #4C6763;
+}
+
+.bio .bio-container .bio__content {
+  max-width: 100rem;
+  margin: 0 auto;
+  background-color: white;
+  padding: 6rem;
+  border-radius: 2rem;
+  margin-bottom: 7.5rem;
+}
+.bio .bio-container .bio__content .bio__content--param {
+  font-size: 2.2rem;
+  font-weight: 400;
+  line-height: 3.5rem;
+  color: #4C6763;
+  font-style: italic;
+  margin-bottom: 3rem;
+}
+.bio .bio-container .bio__content .bio__content--author {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bio .bio-container .bio__content .bio__content--author i {
+  margin-right: 1rem;
+  font-size: 30px;
+  background-image: linear-gradient(to right, #025A4E, #D2E0BD);
+  -webkit-background-clip: text; /* Cho trình duyệt Safari */
+  background-clip: text;
+  color: transparent;
+}
+.bio .bio-container .bio__content .bio__content--author p {
+  font-size: 2.2rem;
+  font-weight: 600;
+  line-height: 3.5rem;
+  color: #4C6763;
+}
+.bio .bio-container .bio__image {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 65rem;
+  grid-gap: 5rem;
+}
+.bio .bio-container .bio__image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2rem;
 }
 
 /*# sourceMappingURL=style.css.map */
