@@ -16,10 +16,6 @@ import { ContactModule } from './contact/contact.module';
       imports: [ConfigModule],
       useFactory: async (configService: ConfigService) => ({
         uri: configService.get<string>('MONGODB_URI'),
-        connectionFactory: (connection) => {
-          connection.plugin(softDeletePlugin);
-          return connection;
-        }
       }),
       inject: [ConfigService],
     }),

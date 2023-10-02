@@ -47,6 +47,8 @@ export class ContactController {
   }
 
   @Delete(':id')
+  @UseInterceptors(TransformInterceptor)
+  @ResponseMessage("Delete a Contact")
   remove(@Param('id') id: string) {
     return this.contactService.remove(id);
   }

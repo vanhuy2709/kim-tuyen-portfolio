@@ -73,10 +73,10 @@ export class ContactService {
     });
   }
 
-  remove(id: string) {
+  async remove(id: string) {
     if (!mongoose.Types.ObjectId.isValid(id))
       return `not found contact`;
-    return this.contactModel.findOneAndRemove({
+    return await this.contactModel.deleteOne({
       _id: id
     })
   }
