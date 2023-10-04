@@ -52,6 +52,14 @@ export class BlogService {
       result //kết quả query
     }
   }
+  async findValue(value: string) {
+    return await this.blogModel.find({
+      $or: [
+        { title: { $regex: value, $options: 'i' } },
+        { description: { $regex: value, $options: 'i' } },
+      ]
+    })
+  }
 
   async findOne(id: string) {
     return await this.blogModel.findOne({ _id: id })

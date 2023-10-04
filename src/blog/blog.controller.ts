@@ -25,6 +25,13 @@ export class BlogController {
     return this.blogService.findAll(+currentPage, +limit, qs);
   }
 
+  @Get("find")
+  @UseInterceptors(TransformInterceptor)
+  @ResponseMessage("Get a Contact")
+  findValue(@Query('value') value: string) {
+    return this.blogService.findValue(value);
+  }
+
   @Get(':id')
   @UseInterceptors(TransformInterceptor)
   @ResponseMessage("Get a Role")

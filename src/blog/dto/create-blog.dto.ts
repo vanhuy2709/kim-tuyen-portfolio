@@ -2,6 +2,7 @@ import { IsNotEmpty } from "class-validator"
 import mongoose from "mongoose"
 
 export class CreateBlogDto {
+
     @IsNotEmpty({ message: "Title không được để trống" })
     title: string
 

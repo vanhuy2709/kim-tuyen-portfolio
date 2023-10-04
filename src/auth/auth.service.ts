@@ -4,7 +4,6 @@ import { JwtService } from '@nestjs/jwt';
 import { IUser } from 'src/users/users.interface';
 import { ConfigService } from '@nestjs/config';
 import { Response } from 'express';
-import { RolesService } from 'src/roles/roles.service';
 import { CreateUserDto } from 'src/users/dto/create-user.dto';
 
 @Injectable()
@@ -13,8 +12,6 @@ export class AuthService {
         private usersService: UsersService,
         private jwtService: JwtService,
         private configService: ConfigService,
-        private roleService: RolesService,
-
     ) { }
 
     //username/ pass là 2 tham số thư viện passport nó ném về
@@ -28,7 +25,6 @@ export class AuthService {
                 return null;
             }
         }
-
     }
 
     async login(user: IUser, response: Response) {
@@ -55,13 +51,13 @@ export class AuthService {
     }
 
     async register(createUserDto: CreateUserDto) {
-
         const user = await this.usersService.create({
             username: createUserDto.username,
             password: createUserDto.password,
         })
         return user;
     }
+
     getRefresh_token = (payload) => {
         return this.jwtService.sign(payload, {
             secret: this.configService.get<string>('JWT_REFRESH_TOKEN_SECRET'),
@@ -100,6 +96,7 @@ export class AuthService {
             throw new BadRequestException("Refresh token không hợp lệ . Vui lòng đăng nhập lại")
         }
     }
+
     logout = async (user: IUser, response: Response) => {
         this.usersService.updateRefresh_Token(user._id, "")
         response.clearCookie("refresh_token")

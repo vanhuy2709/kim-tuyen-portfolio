@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Headers, Post, Render, Req, Res, UseGuards, UseInterceptors } from '@nestjs/common';
+import { Body, Controller, Get, Post, Req, Res, UseGuards, UseInterceptors } from '@nestjs/common';
 import { AuthService } from './auth.service';
 import { Public, ResponseMessage, UserDecorate } from 'src/decorator/customize';
 import { LocalAuthGuard } from './local-auth.guard';
@@ -16,7 +16,7 @@ export class AuthController {
 
     @Public()
     @UseGuards(LocalAuthGuard)
-    @Post('/login')
+    @Post('login')
     @UseInterceptors(TransformInterceptor)
     @ResponseMessage("Login user")
     handleLogin(
@@ -27,7 +27,7 @@ export class AuthController {
 
     @Public()
     @ResponseMessage("Register a new user")
-    @Post('/register')
+    @Post('register')
     @UseInterceptors(CreateInterceptor)
     handleRegister(@Body() createUserDto: CreateUserDto) {
         return this.authService.register(createUserDto)
@@ -35,7 +35,7 @@ export class AuthController {
 
     @Get('profile')
     @UseInterceptors(CreateInterceptor)
-    @ResponseMessage("Register a new user")
+    @ResponseMessage("Get user profile")
     getProfile(@Req() req) {
         return req.user;
     }
