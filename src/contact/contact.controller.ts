@@ -40,6 +40,8 @@ export class ContactController {
   }
 
   @Patch(':id')
+  @UseInterceptors(TransformInterceptor)
+  @ResponseMessage("Update a Contact")
   update(@Param('id') id: string, @Body() updateContactDto: UpdateContactDto) {
     return this.contactService.update(id, updateContactDto);
   }

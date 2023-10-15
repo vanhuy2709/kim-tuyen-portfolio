@@ -8,6 +8,7 @@ import { AuthModule } from './auth/auth.module';
 import { softDeletePlugin } from 'soft-delete-plugin-mongoose';
 import { BlogModule } from './blog/blog.module';
 import { ContactModule } from './contact/contact.module';
+import { BrandModule } from './brand/brand.module';
 
 
 @Module({
@@ -28,6 +29,7 @@ import { ContactModule } from './contact/contact.module';
     AuthModule,
     BlogModule,
     ContactModule,
+    BrandModule,
   ],
   controllers: [AppController],
   providers: [AppService],
